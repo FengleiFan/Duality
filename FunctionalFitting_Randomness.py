@@ -120,15 +120,15 @@ twin2_biases_g = {
 }
 
 twin2_weights_b = {
-    'encoder_h1': tf.Variable(tf.random_normal([num_input, num_hidden_1],mean=0.0, stddev=1.0)),
-    'encoder_h2': tf.Variable(tf.random_normal([num_hidden_1, num_hidden_2],mean=0.0, stddev=1.0)),
-    'encoder_h3': tf.Variable(tf.random_normal([num_hidden_2, num_hidden_3],mean=0.0, stddev=1.0)),
+    'encoder_h1': tf.Variable(tf.random_normal([num_input, num_hidden_1],mean=0.0, stddev=0.1)),
+    'encoder_h2': tf.Variable(tf.random_normal([num_hidden_1, num_hidden_2],mean=0.0, stddev=0.1)),
+    'encoder_h3': tf.Variable(tf.random_normal([num_hidden_2, num_hidden_3],mean=0.0, stddev=0.1)),
 
 }
 twin2_c = {
-    'encoder_c1': tf.Variable(tf.random_normal([num_hidden_1],mean=0.0, stddev=1.0)),
-    'encoder_c2': tf.Variable(tf.random_normal([num_hidden_2],mean=0.0, stddev=1.0)),
-    'encoder_c3': tf.Variable(tf.random_normal([num_hidden_3],mean=0.0, stddev=1.0)),
+    'encoder_c1': tf.Variable(tf.random_normal([num_hidden_1],mean=0.0, stddev=0.1)),
+    'encoder_c2': tf.Variable(tf.random_normal([num_hidden_2],mean=0.0, stddev=0.1)),
+    'encoder_c3': tf.Variable(tf.random_normal([num_hidden_3],mean=0.0, stddev=0.1)),
 
 }
 
