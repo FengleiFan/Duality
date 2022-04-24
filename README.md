@@ -12,11 +12,11 @@ This part includes implementations of eight equivalent networks in light of the 
 </p>
 
 
-## Folders 
+# Folders 
 **NetworkEquivalence**: this directory contains codes for eight equivalent networks. The used dataset is the breast cancer datatset.<br/>
 
 
-## Running Experiments
+# Running Experiments
 
 Please first go to each directory. Each directory consists of two scripts. One is about the network, and the other is the main file.  
 
