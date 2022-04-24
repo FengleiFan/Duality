@@ -27,4 +27,12 @@ Please first go to each directory. Each directory consists of two scripts. One i
 ```
 
 # Robustness
-In this part, .
+In this part, we compare the robustness of a deep and a wide quadratic network constructed as Figure 2 shows.
+<p align="center">
+  <img width="480" src="https://github.com/FengleiFan/Duality/blob/master/equivalent_networks.png">
+</p>
+
+<p align="center">
+  Figure 2. Eight .
+</p>
+
