@@ -49,6 +49,8 @@ Furthermore, we used the following four popular adversarial attack methods to ev
 
 **Robustness**: this directory contains codes for training deep and wide quadratic networks. The used dataset is the MNIST.<br/>
 
+##  Running Experiments ## 
+
 Please first go to the directory of "Robustness" .
 
 Then, run the following code to train a wide quadratic network and a deep quadratic network, respectively.
