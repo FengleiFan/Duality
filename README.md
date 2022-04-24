@@ -4,7 +4,7 @@
 This part includes implementations of eight equivalent networks in light of the extended De Morgan's law.
 
 <p align="center">
-  <img width="320" src="https://github.com/FengleiFan/Duality/blob/master/equivalent_networks.png">
+  <img width="480" src="https://github.com/FengleiFan/Duality/blob/master/equivalent_networks.png">
 </p>
 
 <p align="center">
