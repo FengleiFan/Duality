@@ -57,7 +57,7 @@ Then, run the following code to train a wide quadratic network and a deep quadra
 >> python Robustness/MNIST_QuadraticTrain_deep.py 
 >> python Robustness/MNIST_QuadraticTrain_deep_RELU.py 
 ```
-Lastly, run the following code to test the robustness of the already-trained wide and deep networks.
+Lastly, run the following code to test the robustness of the already-trained wide and deep networks with three robustness methods.
 
 ```ruby
 >> python Robustness/IFSGM_wide.py    
