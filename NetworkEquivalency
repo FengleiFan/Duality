@@ -248,25 +248,7 @@ with tf.Session() as sess:
             
     Prediction = sess.run(output_layer, feed_dict={X: input_data, Y: output_data})
             
-            
-
-
-#%%
-
-# =============================================================================
-# Prediction_ = Prediction.argmax(axis=1)
-# 
-# 
-# 
-# plt.figure()
-# 
-# plt.scatter(input_data, target)
-# plt.scatter(input_data, Prediction_)
-# 
-# plt.xlabel('MEAN RADIUS')
-# plt.yticks([0,1])
-# =============================================================================
-
+           
 
 
 
