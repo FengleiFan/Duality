@@ -19,7 +19,7 @@ This part includes implementations of eight equivalent networks in light of the 
 
 ##  Running Experiments ## 
 
-Please first go to each directory. Each directory consists of two scripts. One is about the network, and the other is the main file.  
+Please first go to the directory of "NetworkEquivalence" .
 
 ```ruby
 >> python NetworkEquivalence/NetworkEquivalency_I.py    
@@ -39,6 +39,43 @@ In this part, we compare the robustness of a deep and a wide quadratic network c
 
 **Experimental Design** 
 
-We first preprocessed the MNIST dataset using image deskewing and dimension deduction techniques. Image deskewing (\url{https://fsix.github.io/mnist/Deskewing.html}) straightens the digits that are written in a crooked manner. Mathematically, skewing is modeled as an affine transformation: $Image^{'} = A(Image)+b$, in which the center of mass of the image is computed to estimate how much offset is needed, and the covariance matrix is estimated to approximate by how much an image is skewed. Furthermore, the center and covariance matrix are employed for the inverse affine transformation, which is referred to as deskewing. Then, we used t-SNE to reduce the dimension of the MNIST from $28\times 28$ to $2$, as the two-dimensional embedding space. 
+We first preprocessed the MNIST dataset using image deskewing and dimension deduction techniques. Image deskewing (https://fsix.github.io/mnist/Deskewing.html) straightens the digits that are written in a crooked manner. Mathematically, skewing is modeled as an affine transformation: $Image^{'} = A(Image)+b$, in which the center of mass of the image is computed to estimate how much offset is needed, and the covariance matrix is estimated to approximate by how much an image is skewed. Furthermore, the center and covariance matrix are employed for the inverse affine transformation, which is referred to as deskewing. Then, we used t-SNE to reduce the dimension of the MNIST from $28\times 28$ to $2$, as the two-dimensional embedding space. 
+
+
+Furthermore, we used the following four popular adversarial attack methods to evaluate the robustness of the deep learning models: (1) fast gradient method; (2) fast sign gradient method (FSGM); (3) iterative fast sign gradient method (I-FSGM); and (4) DeepFool.
+
+
+## Folders ## 
+
+**Robustness**: this directory contains codes for training deep and wide quadratic networks. The used dataset is the MNIST.<br/>
+
+Please first go to the directory of "Robustness" .
+
+Then, run the following code to train a wide quadratic network and a deep quadratic network, respectively.
+```ruby
+>> python Robustness/MNIST_QuadraticTrain_wide.py    
+>> python Robustness/MNIST_QuadraticTrain_deep.py 
+>> python Robustness/MNIST_QuadraticTrain_deep_RELU.py 
+```
+Lastly, run the following code to test the robustness of the already-trained wide and deep networks.
+
+```ruby
+>> python Robustness/IFSGM_wide.py    
+>> python Robustness/IFSGM_deep.py 
+>> python Robustness/IFSGM_deep_relu.py 
+```
+
+```ruby
+>> python Robustness/FSGM_wide.py    
+>> python Robustness/FSGM_deep.py 
+>> python Robustness/FSGM_deep_relu.py 
+```
+
+```ruby
+>> python Robustness/DF_wide.py    
+>> python Robustness/DF_deep.py 
+>> python Robustness/DF_deep_relu.py 
+```
+
 
 
