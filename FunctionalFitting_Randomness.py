@@ -18,10 +18,6 @@ np.random.seed(seed=19)
 Coefficient_x = np.random.normal(mu, sigma, 9)
 Coefficient_y = np.random.normal(mu, sigma, 9)
 
-# =============================================================================
-# Coefficient_x = [1, 2, 3, 4, 5]
-# Coefficient_y = [1, 2, 3, 4, 5]
-# =============================================================================
 
 output_data_x  = Coefficient_x[0] + Coefficient_x[1]*xv + Coefficient_x[2]*xv**2 + Coefficient_x[3]*xv**3 + Coefficient_x[4]*xv**4 + Coefficient_x[5]*xv**5 + Coefficient_x[6]*xv**6 + Coefficient_x[7]*xv**7 + Coefficient_x[8]*xv**8     
 output_data_y  = Coefficient_y[0] + Coefficient_y[1]*yv + Coefficient_y[2]*yv**2 + Coefficient_y[3]*yv**3 + Coefficient_y[4]*yv**4 + Coefficient_y[5]*yv**5 + Coefficient_y[6]*yv**6 + Coefficient_y[7]*yv**7 + Coefficient_y[8]*yv**8
@@ -215,19 +211,8 @@ with tf.Session() as sess:
 
             Prediction = sess.run(y_pred, feed_dict={X: input_data_copy})
 
-# =============================================================================
-#             csfont = {'fontname':'Times New Roman'}
-#             plt.figure()
-#             
-#             t = np.arange(1,10001)
-#             plt.plot(t.T, Prediction,label='Network Fitting')
-#             
-#             plt.plot(t.T, output_data_copy,label='Original Curve')
-#             
-#             plt.legend()
-# =============================================================================
-            
-            
+
+                   
 #%%
 
 csfont = {'fontname':'Times New Roman'}
