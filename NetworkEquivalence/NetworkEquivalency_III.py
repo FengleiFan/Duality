@@ -146,18 +146,6 @@ DeepArm_1_biases = {
     'b3': tf.Variable(tf.random_normal([deep_hidden_3],mean=0.0, stddev=variance)),
 }
 
-DeepArm_2_weights = {
-    'h1': tf.Variable(tf.random_normal([deep_hidden_1, deep_hidden_1],mean=0.0, stddev=variance)),
-    'h2': tf.Variable(tf.random_normal([deep_hidden_1, deep_hidden_2],mean=0.0, stddev=variance)),
-    'h3': tf.Variable(tf.random_normal([deep_hidden_2, deep_hidden_3],mean=0.0, stddev=variance)),
-}
-
-DeepArm_2_biases = {
-    'b1': tf.Variable(tf.random_normal([deep_hidden_1],mean=0.0, stddev=variance)),
-    'b2': tf.Variable(tf.random_normal([deep_hidden_2],mean=0.0, stddev=variance)),
-    'b3': tf.Variable(tf.random_normal([deep_hidden_3],mean=0.0, stddev=variance)),
-}
-
 DeepArm_Output_weights = {
     'h1': tf.Variable(tf.random_normal([deep_hidden_1, deep_hidden_1],mean=0.0, stddev=variance)),
     'h2': tf.Variable(tf.random_normal([deep_hidden_1, deep_hidden_2],mean=0.0, stddev=variance)),
@@ -197,17 +185,16 @@ Y = tf.placeholder(tf.float32, shape = (None, 2))
 Wide_sub1 = twin(X, Arm1_weights, Arm1_biases)
 Wide_sub2 = twin(X, Arm2_weights, Arm2_biases)
 Wide_sub3 = twin(X, Arm3_weights, Arm3_biases)
-
+Wide_sub4 = twin(X, Arm4_weights, Arm4_biases)
 
 
 Deep_sub1  = twin(X, DeepArm_Input_weights, DeepArm_Input_biases)
 Deep_sub2  = twin(Deep_sub1, DeepArm_1_weights, DeepArm_1_biases)
-Deep_sub3  = twin(Deep_sub2, DeepArm_2_weights, DeepArm_2_biases)
-Deep_sub4  = twin(Deep_sub3, DeepArm_Output_weights, DeepArm_Output_biases)
+Deep_sub3  = twin(Deep_sub2, DeepArm_Output_weights, DeepArm_Output_biases)
 
-output_layer_1 = -Wide_sub1- Wide_sub2 - Wide_sub3 + final_bias
+output_layer_1 = -Wide_sub1- Wide_sub2 - Wide_sub3 -Wide_sub4 + final_bias
 
-output_layer_2 = Deep_sub4
+output_layer_2 = Deep_sub3
 
 output_layer = output_layer_1 + output_layer_2
 
@@ -248,7 +235,25 @@ with tf.Session() as sess:
             
     Prediction = sess.run(output_layer, feed_dict={X: input_data, Y: output_data})
             
-           
+            
+
+
+#%%
+
+# =============================================================================
+# Prediction_ = Prediction.argmax(axis=1)
+# 
+# 
+# 
+# plt.figure()
+# 
+# plt.scatter(input_data, target)
+# plt.scatter(input_data, Prediction_)
+# 
+# plt.xlabel('MEAN RADIUS')
+# plt.yticks([0,1])
+# =============================================================================
+
 
 
 
