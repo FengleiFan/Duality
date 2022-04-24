@@ -13,6 +13,7 @@ This part includes implementations of eight equivalent networks in light of the 
 
 
 ## Folders ## 
+
 **NetworkEquivalence**: this directory contains codes for eight equivalent networks. The used dataset is the breast cancer datatset.<br/>
 
 
@@ -37,6 +38,7 @@ In this part, we compare the robustness of a deep and a wide quadratic network c
 </p>
 
 **Experimental Design** 
+
 We first preprocessed the MNIST dataset using image deskewing and dimension deduction techniques. Image deskewing (\url{https://fsix.github.io/mnist/Deskewing.html}) straightens the digits that are written in a crooked manner. Mathematically, skewing is modeled as an affine transformation: $Image^{'} = A(Image)+b$, in which the center of mass of the image is computed to estimate how much offset is needed, and the covariance matrix is estimated to approximate by how much an image is skewed. Furthermore, the center and covariance matrix are employed for the inverse affine transformation, which is referred to as deskewing. Then, we used t-SNE to reduce the dimension of the MNIST from $28\times 28$ to $2$, as the two-dimensional embedding space. 
 
 
