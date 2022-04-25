@@ -19,7 +19,7 @@ This part includes implementations of eight equivalent networks in light of the 
 
 ##  Running Experiments ## 
 
-Please first go to the directory of "NetworkEquivalence" .
+Please first go to the directory of "NetworkEquivalence", then execute
 
 ```ruby
 >> python NetworkEquivalence/NetworkEquivalency_I.py    
@@ -51,7 +51,7 @@ Furthermore, we used the following four popular adversarial attack methods to ev
 
 ##  Running Experiments ## 
 
-Please first go to the directory of "Robustness" .
+Please first go to the directory of "Robustness", then execute
 
 Then, run the following code to train a wide quadratic network and a deep quadratic network, respectively.
 ```ruby
