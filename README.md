@@ -51,7 +51,7 @@ Furthermore, we used the following four popular adversarial attack methods to ev
 
 ##  Running Experiments ## 
 
-Please first go to the directory of "Robustness", then execute
+Please first go to the directory of "Robustness".
 
 Then, run the following code to train a wide quadratic network and a deep quadratic network, respectively.
 ```ruby
